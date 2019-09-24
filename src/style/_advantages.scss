@@ -1,0 +1,143 @@
+.advantages {
+    display: flex;
+
+    @include respond(md) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @include respond(sm) {
+        padding-top: 50px;
+    }
+
+    &__title-box {
+        flex-basis: 42%;
+        padding-right: 80px;
+        align-self: center;
+        transform: translateY(-15%);
+
+        @include respond(xl) {
+            padding-right: 40px; 
+        }
+
+        @include respond(md) {
+            transform: translateY(0);
+            align-self: stretch;
+            padding: 0px;
+            margin-bottom: 64px;
+        }
+    }
+    
+    &__title {
+        font-size: 2.5rem;
+        margin-bottom: 8px;
+
+        @include respond(md) {
+
+            line-height: 1.4;
+            margin-bottom: 24px;
+        }
+    }
+    
+    &__subtitle {
+        font-size: 2rem;
+        font-weight: 400;
+        text-align: right;
+        margin: 0;
+
+        @include respond(md) {
+            text-align: left;
+        }
+    }
+    
+    &__list {
+        flex-basis: 58%;
+
+        @include respond(md) {
+            flex-basis: 50%;
+        }
+
+        @include respond(sm) {
+            margin-bottom: 35px;
+        }
+    }
+
+    &__list-item {
+        font-size: 20px;
+        padding-left: 90px;
+        max-width: 520px;
+        margin-bottom: 30px;     
+        position: relative;
+        
+        @include respond(md) {
+            padding-left: 60px;
+
+            &:not(:last-child) {
+                margin-bottom: 80px; 
+            }
+        }
+
+        @include respond(sm) {
+            padding: 0px;
+
+        }
+
+        .half-number {
+            position: absolute;
+            top: 0; left: 0;
+            line-height: 1.125; 
+            
+            @include respond(sm) {
+                top: 2px;
+                transform: translateY(-100%);
+            }
+        }
+    }
+    
+    &__list-item-title {
+        color: $dark-blue;
+
+        @include respond(md) {
+            font-size: 24px;
+        }
+    }
+    
+    &__list-item-desc {
+        font-size: 16px;
+        color: $dark;
+
+        @include respond(md) {
+            font-size: 20px;
+        }
+    }
+
+    &_offer {
+        .advantages__title {
+            &_static {
+                white-space: nowrap;
+            }
+            
+            @include respond(xs) {
+                font-size: 2rem;
+            }
+        }
+        
+        .advantages__subtitle {}
+    }
+
+    &_bussines {
+        .advantages__list-item {
+            .half-number {
+                position: absolute;
+                top: 50%; left: 0;
+                line-height: 1.125;
+                transform: translateY(-50%); 
+                
+                @include respond(sm) {
+                    top: 2px;
+                    transform: translateY(-100%);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,195 @@
+.head-teaser {
+    display: flex;
+    margin-top: -275px;
+    margin-bottom: 100px;
+    background-color: #ffffff;
+    position: relative;
+    box-shadow: 0px 20px 20px -5px rgba(0, 0, 0, 0.25); 
+
+    @include respond(md) {
+        margin-bottom: 80px;
+    }
+    
+    @include respond(sm) {
+        margin-top: -310px;
+        margin-bottom: 0px;
+        flex-direction: column;
+        box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    &:before {
+        content: attr(data-text);
+        position: absolute;   
+        bottom: -230px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 20rem;
+        font-weight: 900;
+        color: $dark-blue;
+        user-select: none;
+        text-transform: uppercase;
+        opacity: 0.05;
+        z-index: -1;
+
+        @include respond(xl) {
+            font-size: 17rem;
+            bottom: -215px;
+        }
+
+        @include respond(lg) {
+            font-size: 14.5rem;
+            bottom: -190px;
+        }
+
+        @include respond(md) {
+            display: none;
+        }
+    }
+
+    &_analytic,
+    &_marketplace {
+        &:before {
+            bottom: -210px;
+            font-size: 17.5rem;
+    
+            @include respond(xl) {
+                font-size: 15rem;
+                bottom: -190px;
+            }
+    
+            @include respond(lg) {
+                font-size: 12.5rem;
+                bottom: -170px;
+            }
+        }
+    }
+
+    &__hero {
+        flex-basis: 51%;
+        align-self: flex-end;
+        padding: 10px 60px 0px 55px;
+
+        @include respond(lg) {
+            padding: 10px 50px 0px 40px;
+        }
+
+        @include respond(md) {
+            padding: 10px 20px 0px 20px;
+        }
+
+        @include respond(sm) {
+            flex-basis: auto;
+            align-self: stretch;
+            padding: 30px 100px 0px 100px;
+            margin-bottom: 30px;
+        }
+
+        @include respond(xs) {
+            flex-basis: auto;
+            padding: 30px 15px 0px 15px;
+        }
+
+        .image-wrapper {
+
+            &:before {
+                padding-top: 93.3%;
+            }
+        }
+    }
+    
+    &__content {
+        flex-basis: 49%;
+        padding: 50px 40px 20px 0px;
+
+        @include respond(md) {
+            padding: 4vw 0px 0px 0px;
+        }
+
+        @include respond(sm) {
+            text-align: center;
+            flex-basis: auto;
+            align-self: center;
+            padding: 20px 24px 0px 24px;
+            margin-bottom: 65px;
+        }
+
+        @include respond(xs) {
+            padding-top: 0;
+            align-self: stretch;
+            text-align: left;
+        }
+    }
+    
+    &__title {
+        font-size: 3rem;
+        line-height: 1.2;
+        margin-bottom: 24px;
+        padding-right: 30px;
+
+        .smaller {
+            font-size: 2rem;
+            margin-bottom: 16px;
+
+            @include respond(md) {
+                margin-bottom: 5px;
+            }
+
+            @include respond(sm) {
+                padding-right: 0px;
+            }
+
+            @include respond(xs) {
+                line-height: 1;
+                margin-bottom: 10px;
+                font-size: 1.5rem;
+            }
+        }
+
+        @include respond(lg) {
+            font-size: 2.5rem;
+        }
+
+        @include respond(md) {
+            margin-bottom: 16px;
+        }
+
+        @include respond(sm) {
+            margin-bottom: 30px;
+        }
+
+        @include respond(xs) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__basic-form {
+        padding: 0px 40px 40px 0px;
+
+        @include respond(sm) {
+            padding: 0;
+        }
+    }
+    
+    &__button {
+        padding-right: 34px;
+        padding-left: 34px;
+
+        @include respond(lg) {
+            padding-right: 17px;
+            padding-left: 17px;
+        }
+
+        @include respond(sm) {
+            padding-right: 34px;
+            padding-left: 34px;
+        }
+        
+        @include respond(xs) {
+            width: 100%;
+            font-size: 16px;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+}
+

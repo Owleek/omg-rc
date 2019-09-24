@@ -1,0 +1,146 @@
+.company-status {
+    padding: 60px 75px 0px 75px;
+    background-color: #ffffff;
+    box-shadow: 0px 20px 20px -5px rgba(0, 0, 0, 0.25);
+
+
+    @include respond(md) {
+        padding: 60px 40px 0px 40px;
+    }
+
+    @include respond(sm) {
+        padding: 50px 24px 0px 24px;
+        margin-left: -30px;
+        margin-right: -30px;
+        box-shadow: none;
+    }
+
+    @include respond(xs) {
+        margin-left: -24px;
+        margin-right: -24px;
+    }
+
+    &__title {
+        font-size: 4.5rem;
+        margin-bottom: 50px;
+
+        .smaller {
+            font-size: 3.5rem;
+
+            @include respond(md) {
+                font-size: 2rem;
+            }
+
+            @include respond(xs) {
+                font-size: 1.875rem;
+                font-weight: 500;
+            }
+        }
+
+        @include respond(md) {
+            font-size: 2.5rem;
+            margin-bottom: 70px;
+        }
+    }
+    
+    &__body {
+        position: relative;
+        padding-bottom: 110px;
+
+        @include respond(md) {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 75px;
+        }
+
+        @include respond(sm) {
+            padding-bottom: 45px;
+        }
+    }
+    
+    &__list {
+        width: 49%;
+        display: flex;
+
+        @include respond(md) {
+            width: 100%;
+        }
+
+        @include respond(xs) {
+            flex-direction: column;
+        }
+    }
+    
+    &__list-item {
+        flex-basis: 33.333%;
+        padding-right: 32px;
+        color: $dark;
+
+        @include respond(xs) {
+            display: flex;
+            align-items: center;
+            padding-right: 0px;
+            justify-content: space-between;
+            margin-bottom: 25px;
+        }
+    }
+
+    &__list-text {
+        @include respond(xs) {
+            font-size: 16px;
+            flex-basis: 50%;
+            padding-left: 30px;
+            text-align: left;
+            padding-left: 15px;
+        }
+    }
+    
+    &__list-item-data {
+        font-size: 2.5rem;
+        font-weight: 500;
+        color: $dark-blue;
+    }
+    
+    &__emblem-container {
+        position: relative;
+        width: 100%;
+
+        @include respond(md) {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 32px;
+        }
+    }
+    
+    .emblem {
+        position: absolute;
+        top: 0px; right: 0px;
+        width: 172px;
+        height: 189px;
+
+        @include respond(md) {
+            position: static;
+        }
+
+        &_google {
+            top: -87px;
+            right: 0px;
+            transform: translateY(-35px);
+            margin-left: -25px;
+
+            @include respond(lg) {
+                right: -23px;
+            }
+        }
+        
+        &_yandex {
+            top: -85px;
+            right: 148px;
+
+            @include respond(lg) {
+                right: 125px;
+            }
+        }
+        
+    }
+}

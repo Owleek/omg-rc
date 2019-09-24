@@ -1,0 +1,262 @@
+.youtube-section {
+    @include respond(sm) {
+        padding-top: 50px;
+        margin-bottom: 55px;
+    }
+
+    &__title {
+        font-size: 6.25rem;
+        padding-left: 100px;
+        margin-bottom: 110px;
+
+        .smaller {
+            font-size: 4rem;
+        }
+
+        @include respond(xl) {
+            padding-left: 0px;
+        }
+
+        @include respond(md) {
+            display: none;
+        }
+
+    }
+
+    &__title-mobile {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        display: none;
+
+        .smaller {
+            font-size: 2.5rem;
+            display: inline;
+        }
+
+        @include respond(md) {
+            display: block;
+        }
+    }
+
+    &__carousel-wrapper {
+        position: relative;
+    }
+
+    &__carousel {
+        display: flex;
+        margin-left: -20px !important;
+        margin-right: -20px !important;
+        margin-top: -20px !important;
+        width: auto !important;
+
+        @include respond(md) {
+            padding: 0px 96px 8px 8px !important;
+            margin: 0px -40px 35px -8px !important;
+        }
+    }
+
+    &__carousel-item {
+        display: flex;
+        align-items: flex-start;
+        padding: 48px 20px 48px 20px;
+        opacity: 0 !important;
+
+        &.swiper-slide-active {
+            opacity: 1 !important;
+        }
+
+        @include respond(md) {
+            display: flex;
+            padding: 20px 8px;
+            opacity: 1 !important;
+        }
+    }
+
+    &__card {
+        flex-basis: 33.333%;
+        background-color: #ffffff;
+        box-shadow: 0px 20px 20px -5px rgba(0, 0, 0, 0.25);
+        position: relative;
+        flex-shrink: unset !important;
+        pointer-events: unset !important;
+
+        @include respond(md) {
+            box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
+            flex-shrink: 0 !important;
+            align-self: stretch;
+            flex-basis: auto !important;
+            height: auto !important;
+        }
+
+        .youtube-carousel-nav {
+            display: none;
+        }
+
+        &_lower {
+            margin-top: 120px;
+
+            @include respond(md) {
+                margin-top: 0px;
+            }
+        }
+
+        &_upper {
+            margin-top: -48px;
+
+            @include respond(md) {
+                margin-top: 0px;
+            }
+
+            .youtube-carousel-nav {
+                display: flex;
+            }
+        }
+
+        .video-wrapper {
+            &:before {
+                padding-top: 65%;
+            }
+        }
+    }
+
+    &__card-video {
+        margin-bottom: 30px;
+
+        @include respond(md) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__card-video .video-play {
+        cursor: pointer;
+    }
+
+    &__card-video .video-play:after {
+        width: 56px;
+        height: 56px;
+        position: absolute;
+        left: 50%;        
+        top: 50%;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(255,255,255,0.5) url(../images/svg/omg-media-svg-play.svg) no-repeat 55% 50%;
+        background-size: 36%;
+         transition: all 0.15s ease-in;   
+        content: '';
+    }
+
+    &__card-video .video-play:hover:after {
+        background-color: rgba(255,255,255,0.8);
+    }
+
+
+    &__card-content {
+        padding: 0 40px;
+
+        @include respond(xl) {
+            padding: 0 16px;
+        }
+    }
+
+    &__card-title {
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: 400;
+        color: $text;
+
+        @include respond(xl) {
+            margin-bottom: 14px;
+        }
+
+        @include respond(md) {
+            font-size: 16px;
+            margin-bottom: 3px;
+        }
+    }
+
+    &__card-time {
+        display: block;
+        margin-bottom: 35px;
+        color: $secondary;
+
+        @include respond(md) {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__pagination {
+        .items-counter {
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: block;
+
+            @include respond(md) {
+                display: none;
+            }
+        }
+
+        .carousel-dots {
+            display: none;
+            text-align: center;
+
+            @include respond(md) {
+                display: block;
+            }
+        }
+
+        .carousel-dot {
+            display: inline-block;
+            padding: 3px !important;
+            margin: 0 4px;
+            cursor: pointer;
+            opacity: 1;
+
+            span {
+                display: block;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: $silver;
+            }
+
+            &-active {
+                span {
+                    background: $dark-blue;
+                }
+            }
+        }
+    }
+}
+
+.youtube-carousel-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+
+    @include respond(md) {
+        display: none !important;
+    }
+
+    &__prev {
+        &:before {
+            content: '‹';
+        }
+    }
+
+    &__next {
+        &:before {
+            content: '›';
+        }
+    }
+
+    &__prev,
+    &__next {
+        line-height: 72px;
+        @include carousel-control;
+    }
+}
+

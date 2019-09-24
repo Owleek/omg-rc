@@ -1,0 +1,132 @@
+.subscribe {
+    color: #ffffff;
+    background-color: $dark-blue;
+    padding: 50px 80px;
+
+    @include respond(md) {
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+
+    @include respond(sm) {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+    @include respond(xs) {
+        padding: 50px 24px 0px 24px;
+    }
+
+    &__title,  
+    &__subtitle {
+        color: #ffffff;
+    }
+    
+    &__title {
+        font-size: 32px;
+        font-weight: 500;
+        margin-bottom: 5px;
+
+        @include respond(xs) {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+    }
+    
+    &__subtitle {
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 20px;
+        
+        @include respond(sm) {
+            margin-bottom: 40px;
+        }
+        
+        @include respond(xs) {
+            margin-bottom: 24px;
+        }
+    }
+    
+    &__social {
+        margin-bottom: 50px;
+        
+        @include respond(sm) {
+           display: flex;
+           flex-direction: column;     
+        }
+
+        @include respond(xs) {
+           display: flex;
+           flex-direction: column; 
+           margin-bottom: 0px;
+           padding-bottom: 105px;    
+        }
+        
+        .social__box {
+            margin-right: 6px;
+
+            @include respond(sm) {
+                width: 94px;
+                margin-right: 25px;
+            }
+
+            @include respond(xs) {
+                margin-right: 16px;
+            }
+        }
+
+        .row {
+            margin-right: 5px;
+
+            @include respond(sm) {
+                display: flex;
+                justify-content: center;
+                margin-right: -25px;
+                margin-bottom: 25px;
+                padding: 0px 10%;
+            }
+
+            @include respond(xs) {
+                padding: 0;
+                margin-right: -16px;
+                margin-bottom: 16px;
+            }
+        }
+        .social__icon {
+            &_vk {
+            }
+        
+            &_facebook {
+            }
+            
+            &_youtube {
+            }
+            
+            &_inst {
+            }
+            
+            &_telegram {
+            }
+            
+            &_email {
+            }
+        }
+    
+    }
+
+    &_blog {
+        margin-bottom: 32px;
+
+        @include respond(md) {
+			margin-bottom: 44px;
+        }
+        
+        @include respond(sm) {
+			margin-bottom: 30px;
+		}
+
+        @include respond(xs) {
+			margin-bottom: 20px;
+		}
+    }
+}

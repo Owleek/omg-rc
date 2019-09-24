@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HOME</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="style/libs.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,900&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />    
+
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <main class="main">
+            <div class="head-section">
+                <div class="layout-center">
+                    <div class="relative-wrapper">
+                        <header class="header header_absolute">
+                            //= template/header.html
+                        </header>
+                    </div><!-- relative-wrapper -->
+                </div><!-- /layout-center -->
+
+                <div class="team-paralax">
+                    <div class="team-paralax__image">
+                        <img src="images/staff-01.png" />
+                        <img src="images/staff-02.png" />
+                        <img src="images/staff-03.png" />
+                        <img src="images/staff-04.png" />
+                        <img src="images/staff-05.png" />
+                    </div>
+                    <div class="team-paralax__text team-paralax__text-left">
+                        <small>
+                            Ваши
+                        </small>
+                        <strong>
+                            партнёры
+                        </strong>
+                    </div>
+                    <div class="team-paralax__text team-paralax__text-right">
+                        <small>
+                            Больше чем
+                        </small>
+                        <strong>
+                            Агентство <br />
+                            контекстной <br />
+                            рекламы
+                        </strong>
+                        <a href="tel:79200317017" class="button button_block button_call">
+                            Позвонить
+                        </a>
+                    </div>
+                </div><!-- /team-paralax -->
+            </div><!-- /head-section -->
+
+            <div class="layout-center">
+                <div class="relative-wrapper">
+                    <div class="consult-request">
+                        <div class="consult-request__content">
+                            <div class="consult-request__text">
+                                Специализируемся на performance-
+                                маркетинге + аналитике для малого
+                                и среднего бизнеса.
+                            </div>
+                            <button class="button button_block consult-request__button request-trigger">
+                                Бесплатная консультация
+                            </button>
+                            <div class="basic-form basic-form__hide">
+                                <div class="basic-form__row-inputs">
+                                    <div class="basic-form__input-box">
+                                        <input class="basic-form__input basic-form__input_bg-gray js-phone-mask" type="text"
+                                            placeholder="Номер телефона">
+                                    </div>
+                                    <button class="button basic-form__button" onclick="showConsReqSucMes(event)">
+                                        Получить
+                                    </button>
+                                </div>
+                                <div class="basic-form__input-confirm">
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" checked="checked">
+                                        <span class="checkbox__label">
+                                            Согласие на обработку персональных данных
+                                        </span>
+                                    </label>
+                                </div><!-- /basic-form__input-confirm -->
+                            </div><!-- /basic-form -->
+                        </div><!-- /consult-request__content -->
+                        <div class="request-success">
+                            <div class="request-success__message">
+                                <h2>Спасибо за заявку<h2>
+                                <p>Мы скоро вам позвоним</p>
+                                <button class="button">
+                                    Ok
+                                </button>                                
+                            </div>
+                        </div>
+                    </div><!-- /consult-request -->
+                </div><!-- /relative-wrapper -->
+
+                <div class="services-list-wrapper">
+                    <ul class="services-list">
+                        <li class="services-list__item">
+                            <span class="half-number services-list__half-number">01</span>
+                            Делаем анализ маркетинга бесплатно
+                        </li>
+                        <li class="services-list__item">
+                            <span class="half-number services-list__half-number">02</span>
+                            Даём финансовые и юридические гарантии
+                        </li>
+                        <li class="services-list__item">
+                            <span class="half-number services-list__half-number">03</span>
+                            Отправляем регулярные отчеты
+                        </li>
+                        <li class="services-list__item">
+                            <span class="half-number services-list__half-number">04</span>
+                            Оплата после достижения результата
+                        </li>
+                    </ul><!-- /services-list -->
+                </div><!-- /services-list-wrapper -->
+
+                <div class="regular-wrapper block-fadein">
+                    //= template/cases-section.html
+                </div><!-- /cases-section -->
+
+                <div class="regular-wrapper">
+                    //= template/promotion-platforms.html
+                </div><!-- /promotion-platforms -->
+
+                <div class="free-service-wrapper block-fadein">
+                    //= template/free-service-audit.html
+                </div><!-- /free-service-wrapper -->
+
+                <div class="regular-wrapper">
+                    //= template/youtube-section.html
+                </div><!-- /youtube-section -->
+
+                <div class="regular-wrapper">
+                    //= template/partner-section.html
+                </div><!-- /partner-section -->
+
+                <div class="blog-briefs-wrapper">
+                    //= template/blog-briefs.html
+                </div><!-- /blog-briefs-wrapper -->
+
+                <div class="team-section-wrapper block-fadein">
+                    //= template/team-section.html
+                </div><!-- /team-section -->
+            </div><!-- /layout-center -->
+        </main><!-- /main -->
+        //= template/main-footer.html
+    </div><!-- /page-wrapper -->
+</body>
+
+</html>

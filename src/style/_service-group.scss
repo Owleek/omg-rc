@@ -1,0 +1,103 @@
+.consult-request {
+    position: absolute;
+    right: 0; top: -185px;
+    z-index: 10;
+    width: 42%;
+    padding: 45px 40px 70px 40px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
+
+    &__content {
+        padding-right: 60px;
+
+        @include respond(xl) {
+            padding-right: 0px;
+        }
+    }
+
+    &__text {
+        font-size: 20px;
+        margin-bottom: 40px;
+
+        @include respond(lg) {
+            font-size: 16px;
+        }
+    }
+
+    &__button {
+        @include respond(lg) {
+            font-size: 16px;
+        }
+    }
+
+    @include respond(xl) {
+        padding: 45px 24px 70px 24px;
+    }
+
+    @include respond(md) {
+        display: none;
+    }
+
+    .basic-form {
+        display: none;
+
+         &__input {
+            width: 210px;
+         }
+    }
+
+}
+
+.services-list {
+    width: 58%;
+    padding-right: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 16px;
+    
+    &__item {
+        flex-basis: 25%;
+        padding-right: 40px;
+        
+        @include respond(xl) {
+            padding-right: 32px;
+        }
+
+        @include respond(md) {
+            padding-right: 60px;
+            margin-bottom: 10px;
+        }
+
+        @include respond(sm) {
+            flex-basis: 50%;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        
+        @include respond(xs) {
+            flex-basis: 100%;
+            font-size: 24px;
+            padding-right: 0px;
+            margin-bottom: 40px;
+        }
+    }
+    
+    &__half-number {
+        display: block;
+        margin-bottom: 10px;
+
+        @include respond(lg) {
+            margin-bottom: 0px;
+        }
+    }
+
+    @include respond(xl) {
+        padding-right: 10px;
+        font-size: 14px;
+    }
+
+    @include respond(md) {
+        width: 100%;
+        padding: 65px 0px 25px;
+    }
+}

@@ -1,0 +1,177 @@
+.achievements {
+    padding: 50px 80px 0px 80px;
+    background-color: #ffffff;
+    position: relative;
+    box-shadow: 0px 20px 20px -5px rgba(0, 0, 0, 0.25);
+    
+    @include respond(md) {
+        padding-right: 40px;
+        padding-left: 40px;
+    } 
+    
+    @include respond(sm) {
+        margin-right: -24px;
+        margin-left: -24px;
+        padding-right: 24px;
+        padding-left: 24px;
+        box-shadow: none;
+    } 
+
+    &__title {
+        font-size: 4.5rem;
+        margin-bottom: 45px;
+
+        .smaller {
+            font-size: 3.5rem;
+
+            @include respond(md) {
+                font-size: 2rem;
+            } 
+        }
+
+        @include respond(md) {
+            font-size: 2.5rem;
+            margin-bottom: 80px;
+        } 
+
+    }
+    
+    &__body {
+        padding-bottom: 35px;
+
+        @include respond(sm) {
+            display: flex;
+            flex-direction: column;
+
+        } 
+    }
+
+    &__symbol-container {
+        width: 100%;
+        position: relative;
+
+        @include respond(md) {
+            display: flex;
+            justify-content: center;
+        } 
+    }
+
+    &__symbol {
+        position: absolute;
+        top: -140px; right: 0;
+        width: 123px;
+        height: 124px;
+        z-index: 0;
+
+        @include respond(md) {
+            position: static;
+        } 
+
+        &_shadow {
+            top: -140px;
+            right:  18px;
+            width: 226px;
+            height: 227px;
+            transform: translateY(-60px);
+        }
+
+        &_origin {
+            margin-left: -105px;
+        }
+    }
+    
+    &__list {
+        display: flex;
+        margin-bottom: 50px;
+
+        @include respond(sm) {
+            flex-wrap: wrap;
+            margin-bottom: 0px;
+        } 
+    }
+    
+    &__list-item {
+        flex-basis: 25%;
+        font-size: 20px;
+        color: $dark;
+        display: inline-flex;
+        flex-direction: column;
+        z-index: 1;
+
+        &:not(:last-child) {
+            padding-right: 50px;
+
+            @include respond(xs) {
+                padding-right: 0px;
+            } 
+        }
+
+        @include respond(sm) {
+            flex-basis: 50%;
+            margin-bottom: 30px;
+        } 
+
+        @include respond(xs) {
+            flex-basis: 100%;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        } 
+    }
+
+    &__list-text {
+        font-size: 20px;
+
+        @include respond(md) {
+            font-size: 16px;
+        }         
+
+        @include respond(xs) {
+            padding-right: 20px;
+        }         
+    }
+    
+    &__list-item-data {
+        font-size: 64px;
+        font-weight: 900;
+        color: $dark-blue;
+        margin-top: auto;
+        position: relative;
+
+        @include respond(md) {
+            font-size: 40px;
+            text-align: left;
+        }
+
+        @include respond(xs) {
+            flex: 0 0 35%;
+        }
+
+        .subdata {
+            font-size: 14px;
+            position: absolute;
+            left: 0; bottom: 0;
+            text-transform: uppercase;
+            
+            @include respond(md) {
+                font-size: 16px;
+                bottom: -10px;
+            }
+        }
+    }
+    
+    &__footnote {
+        font-size: 14px;
+        color: $secondary;
+
+        &:before {
+            content: "*";
+            color: $button;
+            padding-right: 10px;
+        }
+
+        @include respond(xs) {
+            display: none;
+        }
+    }
+}

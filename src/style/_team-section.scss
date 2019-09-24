@@ -1,0 +1,267 @@
+.team-section {
+    overflow: hidden;
+    position: relative;
+    background-color: #ffffff;
+    box-shadow: 0px 20px 20px -5px rgba(0, 0, 0, 0.25);
+
+    &:before {
+        content: attr(data-text);
+        position: absolute;
+        top: -185px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 20rem;
+        font-weight: 900;
+        color: $dark-blue;
+        user-select: none;
+        text-transform: uppercase;
+        opacity: 0.05;
+        z-index: -1;
+
+        @include respond(xl) {
+            top: -170px;
+            font-size: 15.6rem;
+        }
+
+        @include respond(lg) {
+            top: -150px;
+            font-size: 14rem;
+        }
+
+        @include respond(md) {
+            display: none;
+        }
+    }
+
+    @include respond(md) {
+        padding-top: 50px;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    &__headline {
+        @include respond(md) {
+            position: relative;
+        }
+    }
+
+    &__counter {
+        position: absolute;
+        left: 40px;
+        top: 60px;
+        z-index: 4;
+
+        @include respond(md) {
+            left: auto;
+            top: auto;
+            right: 0;
+            bottom: 0;
+        }
+    }
+
+    &__title {
+        font-size: 4.5rem;
+        line-height: 1.1;
+        position: absolute;
+        top: 50px; right: 200px;
+        z-index: 3;
+
+        .smaller {
+            text-indent: -80px;
+            font-size: 3.5rem;
+
+            @include respond(md) {
+                text-indent: 0px;
+                font-size: 2.5rem;
+            }
+        }
+
+        @include respond(lg) {
+            right: 150px;
+        }
+
+        @include respond(md) {
+            position: static;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__carousel {
+        width: auto !important;
+        margin-top: -20px;
+
+        @include respond(md) {
+            margin-left: -8px;
+            margin-right: 44px;
+            margin-bottom: 55px;
+        }
+
+        @include respond(sm) {
+            margin-right: 46px;
+        }
+
+        .owl-stage-outer {
+            @include respond(md) {
+                padding-right: 84px;
+                margin-right: -84px;
+                margin-bottom: 20px;
+            }
+
+            @include respond(sm) {
+                padding-right: 72px;
+                margin-right: -70px;
+            }
+
+            .owl-item {
+                @include respond(md) {
+                    padding: 20px 8px;
+                }
+            }
+
+            .owl-stage {
+                @include respond(md) {
+                    display: flex;
+                }
+            }
+        }
+
+        .owl-dots {
+            text-align: center;
+
+            @include respond(md) {
+                margin-right: -52px;
+            }
+
+            @include respond(sm) {
+                margin-right: -72px;
+            }
+
+            .owl-dot {
+                display: inline-block;
+                padding: 3px !important;
+                margin: 0 4px;
+                cursor: pointer;
+
+                &.active {
+                    span {
+                        background: $dark-blue;
+                    }
+                }
+
+                span {
+                    display: block;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background: $silver;
+                }
+            }
+        }
+
+        .owl-nav {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+
+            .owl-prev,
+            .owl-next {
+                @include carousel-control;
+            }
+        }
+    }
+
+    &__carousel-item {}
+
+    &__hero-card {
+        display: flex;
+
+        .image-wrapper {
+            &:before {
+                padding-top: 90%;
+            }
+        }
+
+        @include respond(md) {
+            flex-direction: column;
+        }
+    }
+
+    &__hero-image {
+        flex-basis: 58%;
+        padding: 90px 55px 0px 40px;
+
+        @include respond(xl) {
+            padding: 165px 0px 0px 30px;
+            margin-right: -87px;
+            background-color: #ffffff;
+        }
+
+        @include respond(md) {
+            padding: 5px 36px 0px 36px;
+            margin-right: 0px;
+            box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+    }
+
+    &__hero-info {
+        padding-top: 260px;
+        max-width: 300px;
+        z-index: 10;
+
+        @include respond(md) {
+            padding-top: 0px;
+            max-width: 100%;
+        }
+    }
+
+    &__hero-name{
+        font-size: 2rem;
+        font-weight: 500;
+        margin-bottom: 24px;
+        color: $text;
+
+        @include respond(xs) {
+            margin-bottom: 10px;
+        }
+
+        @include respond(xs) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__hero-about {
+        margin-bottom: 24px;
+
+        @include respond(xl) {
+            margin-bottom: 30px;
+        }
+
+        @include respond(md) {
+            color: $secondary;
+        }
+    }
+
+    &__hero-achievements {
+        display: flex;
+
+        .google-partner-icon {
+            width: 111px;
+            height: 40px;
+            margin-right: 16px;
+
+            @include respond(xl) {
+                margin-right: 6px;
+            }
+
+            @include respond(md) {
+                margin-right: 10px;
+            }
+        }
+
+        @include respond(md) {
+            margin-bottom: 0px;
+        }
+    }
+}

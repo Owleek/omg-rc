@@ -1,0 +1,167 @@
+.free-service {
+    position: relative;
+    padding: 84px 96px 0px 0px;
+    background-color: #ffffff;
+    box-shadow: 0px 20px 20px -5px rgba(0,0,0,0.25);
+
+    @include respond(sm) {
+        box-shadow: none;
+    }
+
+    &:before {
+        content: attr(data-text);
+        position: absolute;
+        bottom: -135px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 13.1rem;
+        font-weight: 900;
+        color: $dark-blue;
+        user-select: none;
+        text-transform: uppercase;
+        opacity: 0.05;
+        z-index: -1;
+
+        @include respond(xl) {
+            bottom: -130px;
+            font-size: 12rem;
+        }
+
+        @include respond(lg) {
+            bottom: -110px;
+            font-size: 10rem;
+        }
+
+        @include respond(md) {
+            display: none;
+        }
+    }
+
+    @include respond(xl) {
+        padding-right: 80px;
+    }
+
+    @include respond(md) {
+        padding: 80px 90px 0px 90px;
+    }
+
+    @include respond(sm) {
+        background-color: $light-blue;
+        padding: 50px 40px 0px 40px;
+        margin-right: -30px;
+        margin-left: -30px;
+    }
+
+    @include respond(xs) {
+        padding-right: 20px;
+        padding-left: 20px;
+        background-color: $light-blue;
+        margin-right: -24px;
+        margin-left: -24px;
+    }
+
+    &__inner {
+        width: 670px;
+        margin-left: auto;
+
+
+        @include respond(lg) {
+            margin: 0 auto;
+        }
+
+        @include respond(md) {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        font-size: 4.5rem;
+        line-height: 1;
+        margin-bottom: 35px;
+
+        @include respond(md) {
+            font-size: 2.5rem;
+        }
+
+        @include respond(sm) {
+            color: #ffffff;
+        }
+
+        @include respond(xs) {
+            font-size: 2.3rem;
+        }
+
+        .smaller {
+            font-size: 3.5rem;
+            text-indent: -100px;
+            margin-bottom: 20px;
+
+            @include respond(lg) {
+                text-indent: 0px;
+            }
+
+            @include respond(md) {
+                font-size: 2.5rem;
+            }
+
+            @include respond(xs) {
+                font-size: 2.3rem;
+            }
+        }
+
+    }
+
+    &__basic-form {
+        padding-bottom: 150px;
+
+        @include respond(md) {
+            padding-bottom: 90px;
+        }
+
+        @include respond(sm) {
+            padding-bottom: 65px;
+            .checkbox__label {
+                &:before {
+                    border: 2px solid $aqua !important;
+                }
+    
+                &:after {
+                    background-image: url(../images/svg/omg-media-svg-сheck-mark-aqua.svg) !important;
+                }
+            }
+        }
+    }
+
+    .half-number {
+        position: absolute;
+        left: 0; top: 0;
+        width: 100%;
+        line-height: 1;
+        text-indent: -11rem;
+        opacity: 0.08;
+        font-size: 36.8rem;
+        letter-spacing: -0.04em;
+        user-select: none;
+        z-index: 0;
+
+        .smaller {
+            font-size: 16.3rem;
+            font-weight: 500;
+
+            @include respond(xl) {
+                font-size: 8.8rem;
+            }
+        }
+
+        @include respond(xl) {
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20rem;
+            text-indent: -6rem;
+        }
+
+        @include respond(lg) {
+            display: none;
+        }
+    }
+}

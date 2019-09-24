@@ -1,0 +1,66 @@
+@mixin respond($device) {
+
+    @if $device == min_xl {
+        @media only screen and (min-width: 1440px) {
+            @content;
+        }
+    };
+
+    @if $device == xl {
+        @media only screen and (max-width: 1399px) {
+            @content;
+        }
+    };
+
+    @if $device == lg {
+        @media only screen and (max-width: 1199px) {
+            @content;
+        }
+    };
+
+    @if $device == md {
+        @media only screen and (max-width: 1023px) {
+            @content;
+        }
+    };
+
+    @if $device == sm {
+        @media only screen and (max-width: 767px) {
+            @content;
+        }
+    };
+
+    @if $device == xs {
+        @media only screen and (max-width: 567px) {
+            @content;
+        }
+    };
+
+    @if $device == us {
+        @media only screen and (max-width: 479px) {
+            @content;
+        }
+    };
+}
+
+@mixin carousel-control {
+    width: $carousel-control-size;
+    height: $carousel-control-size;
+    display: inline-block;
+    font-size: 30px !important;
+    font-weight: 900;
+    background-color: $dark-blue !important;
+    color: $white !important;
+    text-align: center;
+    cursor: pointer;
+    line-height: 72px;
+    transition-duration: 0.3s;
+    transition-delay: 0.1s;
+
+    &.disabled,
+    &.swiper-button-disabled {
+        color: $dark-blue !important;
+        background-color: $white !important;
+        cursor: default;
+    }
+}

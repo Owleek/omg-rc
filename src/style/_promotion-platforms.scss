@@ -1,0 +1,163 @@
+.promotion-platforms-wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.promotion-platforms {
+    padding: 55px 40px;
+    background-color: $dark-blue;
+
+    @include respond(md) {
+        display: none;
+    }
+
+    &__title {
+        float: left;
+        font-size: 1.5rem;
+        font-weight: 900;
+        margin-bottom: 0;
+        color: #ffffff;
+        text-transform: uppercase;
+        line-height: 1.4;
+
+        .smaller {
+            display: block;
+        }
+    }
+
+    &__carousel-container {
+        position: relative;
+        margin-left: 20%;
+        padding-left: 72px;
+        padding-right: 32px;
+    }
+
+    &__carousel {
+        display: flex;
+
+        .owl-item {
+            display: flex;
+            flex-shrink: 0;
+        }
+
+        .owl-stage {
+            display: flex;
+            margin-right: -4px;
+        }
+
+        .owl-nav {
+            position: absolute;
+            height: 0;
+            top: 50%;
+            left: -72px;
+            right: -72px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: -36px;
+
+            .owl-prev,
+            .owl-next {
+                @include carousel-control;
+
+                &.disabled {
+                    background: none !important;
+                    color: white !important;
+                    opacity: 0.3;
+                }
+            }
+        }
+    }
+
+    &__carousel-item {
+        width: 25%;
+        color: #ffffff;
+        font-size: 22px;
+        padding-left: 16px;
+        margin-bottom: 0;
+        margin-right: 10px;
+        border-left: 4px solid $light-blue;
+    }
+
+    &_simple {
+        display: flex;
+        display: none;
+        background-color: #ffffff;
+        padding: 50px 24px 30px 24px;
+
+        @include respond(md) {
+            display: block;
+        }
+
+        @include respond(sm) {
+            margin-right: -30px;
+            margin-left: -30px;
+        }
+
+        @include respond(xs) {
+            margin-right: -24px;
+            margin-left: -24px;
+        }
+
+        .promotion-platforms__title {
+            float: none;
+            font-size: 2.5rem;
+            color: $dark-blue;
+            margin-bottom: 50px;
+
+            .smaller {}
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        @include respond (xs) {
+            flex-direction: column;
+            justify-content: flex-start;
+            flex-wrap: nowrap;
+        }
+    }
+
+    &__list-item {
+        flex-basis: calc(50% - 40px);
+        min-width: 270px;
+        color: $text;
+        font-weight: normal;
+        font-size: 24px;
+        margin-bottom: 55px;
+        max-width: 290px;
+        position: relative;
+        margin-right: 40px;
+
+        @include respond (xs) {
+            margin-right: 0;
+        }
+
+        &:after {
+            content: "";
+            width: 5px;
+            height: 10px;
+            position: absolute;
+            top: 50%; right: 0;
+            transform: translateY(-50%);
+            background-image: url('../images/svg/omg-media-svg-right-arrow-gray.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+
+    }
+
+    &__list-item-link {
+        color: $text;
+        text-decoration: none;
+        display: block;
+
+        &:hover {
+            text-decoration: none;
+            color: $text;
+        }
+    }
+}

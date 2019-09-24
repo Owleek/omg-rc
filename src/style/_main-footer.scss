@@ -1,0 +1,138 @@
+.main-footer {
+    background-color: $light-blue;
+
+    &__container {
+        padding-top: 40px;
+    }
+    
+    &__content {
+        display: flex;
+        margin-bottom: 55px;
+
+        @include respond(md) {
+            flex-direction: column;
+        }
+    }
+    
+    &__title {
+        flex-basis: 38%;
+        padding-right: 40px;
+        color: #ffffff;
+        font-size: 4.5rem;
+        line-height: 1.1;
+        margin-bottom: 0;
+
+        .smaller {
+            font-size: 3.5rem;
+
+            @include respond(lg) {
+                font-size: 3rem;
+            }
+
+            @include respond(md) {
+                font-size: 2.5rem;
+            }
+        }
+
+        @include respond(lg) {
+            font-size: 3rem;
+        }
+
+        @include respond(md) {
+            padding-right: 0px;
+            flex-basis: 100%;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+    }
+    
+    &__box {
+        padding-top: 130px;
+        flex-basis: auto;
+
+        @include respond(lg) {
+            padding-top: 90px;
+        }
+
+        @include respond(md) {
+            align-self: center;
+            margin: 0px;
+            padding: 0px;
+        }
+    }
+    
+    &__contact-list {
+        margin-bottom: 30px;
+
+        @include respond(sm) {
+            margin-bottom: 40px;
+        }
+    }
+    
+    &__contact-list-item {
+        color: #ffffff;
+        font-size: 20px;
+        margin-bottom: 20px;
+
+        @include respond(sm) {
+            font-size: 16px;
+        }
+        
+        a {     
+            color: #ffffff;
+
+            &:hover {
+                color: #ffffff;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__contact {
+        display: flex;
+    }
+    
+    &__svg-box {
+        text-align: center;
+        width: 25px;
+        margin-right: 20px;
+        flex-shrink: 0;
+    }
+
+    &__svg {
+        fill: #53A1EA;
+    }
+
+    &__basic-form {
+        padding-left: 50px;
+
+        @include respond(sm) {
+            padding: 0;
+        }
+
+        .basic-form__row-inputs {
+        }
+        
+        .basic-form__input-box {
+        }
+
+        .basic-form__input {
+            width: 275px;
+
+            @include respond(lg) {
+                width: 255px;
+            }
+ 
+            @include respond(md) {
+                width: 100%;
+            }
+        }
+        
+        .basic-form__input-confirm {
+        }
+    }
+
+    &__copyrights {
+        margin-bottom: 50px;
+    }
+}

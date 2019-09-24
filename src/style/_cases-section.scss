@@ -1,0 +1,410 @@
+$offset: 56px;
+$content-margin-left: 9;
+
+.cases-section {
+    position: relative;
+    background-color: $white;
+    box-shadow: 0px 20px 20px -5px rgba(0,0,0,0.25);
+    display: flex;
+    flex-wrap: wrap;
+
+    &:before {
+        content: attr(data-text);
+        position: absolute;
+        top: -180px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 20rem;
+        font-weight: 900;
+        color: $dark-blue;
+        user-select: none;
+        letter-spacing: 2rem;
+        text-transform: uppercase;
+        opacity: 0.05;
+        z-index: -1;
+
+        @include respond(xl) {
+            top: -153px;
+            font-size: 15.6rem;
+        }
+
+        @include respond(lg) {
+            top: -145px;
+            font-size: 14rem;
+        }
+
+        @include respond(md) {
+            display: none;
+        }
+    }
+
+    @include respond(md) {
+        display: block;
+        background: $dark-blue;
+        padding: 45px $layout-center-padding-md 45px $layout-center-padding-md;
+    }
+
+    @include respond(sm) {
+        padding-right: $layout-center-padding-sm;
+        padding-left: $layout-center-padding-sm;
+        margin: 0px -#{$layout-center-padding-sm};
+        box-shadow: none;
+    }
+
+    @include respond(xs) {
+        padding-right: $layout-center-padding-xs;
+        padding-left: $layout-center-padding-xs;
+        margin: 0px -#{$layout-center-padding-xs};
+    }
+
+    .swiper-container {
+        padding-top:  $offset;
+        margin-top: -$offset;
+
+        @include respond(md) {
+            margin-top: 0;
+            padding-top: 0;
+        }
+    }
+
+    &__pagination {
+        width: 100%;
+
+        .carousel-dots {
+            display: none;
+            text-align: center;
+            padding-top: 40px;
+
+            @include respond(md) {
+                display: block;
+            }
+
+            .carousel-dot {
+                display: inline-block;
+                padding: 3px !important;
+                margin: 0 4px;
+                opacity: 0.3;
+                cursor: pointer;
+
+                &-active {
+                    opacity: 1;
+                }
+
+                span {
+                    display: block;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background: $white;
+                }
+            }
+        }
+
+        .items-counter {
+            display: block;
+            position: absolute;
+            left: 30px;
+            top: 60px;
+            z-index: 100;
+
+            @include respond(md) {
+                display: none;
+            }
+        }
+    }
+
+    &__nav {
+        position: absolute;
+        bottom: 64px;
+        right: calc(326px + #{$offset} + ((100% - #{$offset} * 2) / 100 * #{$content-margin-left}) - #{$carousel-control-size});
+        z-index: 100;
+        display: flex;
+
+        @include respond(lg) {
+            right: calc(300px + #{$offset} + 50px);
+        }
+
+        @include respond(md) {
+            display: none;
+        }
+
+        &-prev,
+        &-next {
+            @include carousel-control;
+        }
+    }
+
+    &__carousel {
+        position: relative;
+        bottom: 0;
+    }
+
+    &__carousel-item {
+        display: flex;
+        padding: 56px 56px 64px 56px;
+        position: relative;
+        background-color: $white;
+
+        @include respond(md) {
+            padding: 0;
+            display: block;
+        }
+    }
+
+    &__video {
+        width: 37%;
+        margin-left: auto;
+        margin-top: -$offset * 2;
+        position: relative;
+
+        @include respond(lg) {
+            width: 40%;
+        }
+
+        @include respond(md) {
+            width: 100%;
+            margin-top: 0;
+
+            &:before {
+                display: block;
+                width: 0;
+                height: 0;
+                padding-top: 70%;
+                content: '';
+            }
+        }
+
+        img, video, iframe {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            @include respond(md) {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+
+    &__video:before {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: rgba(255,255,255,0.3);
+        content: '';
+        z-index: 0;
+    }
+
+    &__video.video-play a:after {
+        width: 96px;
+        height: 96px;
+        position: absolute;
+        left: 50%;        
+        top: 50%;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(255,255,255,0.5) url(../images/svg/omg-media-svg-play.svg) no-repeat 55% 50%;
+         transition: all 0.15s ease-in;   
+        content: '';
+    }
+
+    &__video.video-play a:hover:after {
+        background-color: rgba(255,255,255,0.8);
+    }
+
+    &__video.video-play a:before {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0px; 
+        top: 0px;
+        content: '';
+    }
+
+    &__content {
+        margin-left: #{$content-margin-left + "%"};
+        flex-shrink: 0;
+        flex-basis: 326px;
+        display: flex;
+        flex-direction: column;
+        background: $white;
+
+        @include respond(lg) {
+            flex-basis: 300px;
+            margin-left: 50px;
+        }
+
+        @include respond(md) {
+            margin-left: 0;
+        }
+    }
+
+    &__text {
+        flex-grow: 1;
+
+        @include respond(md) {
+            display: none;
+        }
+    }
+
+    &__mobile-text {
+        display: none;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 100;
+        text-align: center;
+        padding: 0 8px;
+
+        &__subtitle {
+            color: $white;
+            font-size: 32px;
+            font-weight: normal;
+            margin-bottom: 40px;
+            line-height: 1.3;
+
+            @include respond(sm) {
+                font-size: 20px;
+                margin-bottom: 18px;
+            }
+        }
+
+        @include respond(md) {
+            display: block;
+        }
+    }
+
+    &__subtitle {
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 1.22;
+        color: $dark;
+    }
+
+    &__description {
+        line-height: 1.56;
+        margin-bottom: 25px;
+    }
+
+    &__price-container {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 40px;
+
+        @include respond(lg) {
+            padding-left: 0;
+        }
+    }
+
+    &__price-box {
+        flex-basis: 50%;
+        margin-bottom: 24px;
+
+        @include respond(md) {
+            text-align: center;
+            padding: 14px 14px 8px 14px;
+            margin-bottom: 0;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            &_request-price {
+                order: 2;
+                background: $gray;
+            }
+
+            &_requests-count {
+                order: 1;
+                background: $gray;
+            }
+
+            &_monthly-budget {
+                order: 3;
+                background: #0088df;
+                color: $white;
+
+                .cases-section__price {
+                    color: $white;
+                }
+            }
+        }
+
+        &:nth-child(odd) {
+            flex-basis: 90px;
+            margin-right: 40px;
+
+            @include respond(md) {
+                flex-basis: 50%;
+                margin: 0;
+            }
+        }
+
+        &:nth-child(1n+3) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__price-headline {}
+
+    &__price {
+        display: block;
+        font-size: 24px;
+        color: $dark-blue;
+        font-weight: 500;
+        line-height: 1.4;
+
+        @include respond(xs) {
+            font-size: 20px;
+        }
+
+        &_old {
+            text-decoration: line-through;
+            color: $secondary;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+    }
+
+    &__title {
+        font-size: 6.25rem;
+        position: absolute;
+        margin: 0;
+        left: 2.5rem;
+        bottom: calc(75px + #{$offset});
+        z-index: 2;
+        pointer-events: none;
+        line-height: 1.3;
+
+        @include respond(md) {
+            position: static;
+            color: $white;
+            pointer-events: auto;
+            text-align: center;
+            margin-bottom: 34px;
+            font-size: 40px;
+            line-height: 1.48;
+        }
+    }
+
+    &__title-span {
+        padding-left: 2rem;
+        font-size: 4rem;
+        font-weight: normal;
+        text-transform: none;
+
+        @include respond(md) {
+            font-size: 38px;
+            padding-left: 0;
+        }
+    }
+}
+
+.block-fadein.inview .cases-section__carousel.content-fadein {
+    @include respond(md) {
+        transition: unset;
+    }
+}

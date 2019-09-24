@@ -1,0 +1,78 @@
+.social {
+    display: flex;
+
+    &__box { 
+        width: 64px;
+        height: 64px;
+        position: relative;
+        display: inline-block;
+        text-decoration: none !important;
+
+        &_vk {
+            background-color: #4A76A8;
+        }
+        
+        &_facebook {
+            background-color: #4267B2;;
+        }
+        
+        &_youtube {
+            background-color: #F80000;
+        }
+        
+        &_inst {
+            background-color: #BE0457;
+        }
+        
+        &_telegram {
+            background-color: #35A9DC;
+        }
+        
+        &_email {
+            background-color: #E54745;
+        }
+
+        &_twitter {
+            background-color: #1DA1F2;
+        }
+    }
+
+    &__icon {
+        fill: #ffffff;
+        width: 26px;
+        height: 20px;
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+
+        &_vk {
+            width: 26px;
+            height: 15px;
+        }
+        
+        &_facebook {
+            width: 12px;
+            height: 22px;
+        }
+        
+        &_youtube {
+            width: 26px;
+            height: 18px;
+        }
+        
+        &_inst {
+            width: 26px;
+            height: 26px;
+        }
+        
+        &_telegram {
+            width: 26px;
+            height: 26px;
+        }
+        
+        &_email {
+            width: 26px;
+            height: 20px;
+        }
+    }
+}
