@@ -202,25 +202,6 @@
 	&__follow {}
 
 	&__links {
-		.more-social {
-			width: 40px;
-			height: 28px;
-			background-color: $fade;
-			display: inline-block;
-			position: relative;
-			cursor: pointer;
-
-			&:before  {
-				content: "+";
-				position: absolute;
-				font-size: 20px;
-				font-weight: 500;
-				color: #A1A4B1;
-				left: 50%; top: 50%;
-				transform: translate(-50%, -50%);
-			}
-		}
-
 		.social__box {
 			width: 40px;
 			height: 28px;

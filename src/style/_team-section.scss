@@ -207,7 +207,7 @@
 
     &__hero-info {
         padding-top: 260px;
-        max-width: 300px;
+        max-width: 360px;
         z-index: 10;
 
         @include respond(md) {
@@ -216,7 +216,7 @@
         }
     }
 
-    &__hero-name{
+    &__hero-name {
         font-size: 2rem;
         font-weight: 500;
         margin-bottom: 24px;
@@ -224,9 +224,6 @@
 
         @include respond(xs) {
             margin-bottom: 10px;
-        }
-
-        @include respond(xs) {
             font-size: 1.5rem;
         }
     }
@@ -236,6 +233,10 @@
 
         @include respond(xl) {
             margin-bottom: 30px;
+        }
+
+        @include respond(md) {
+            margin-right: 20px;
         }
 
         @include respond(md) {

@@ -8,18 +8,36 @@
         padding-left: 16px;
     }
 
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
     &__title {
         font-size: 2.5rem;
         font-weight: 500;
-        margin-bottom: 30px;
+        margin-bottom: 0;
 
         @include respond(xs) {
             font-size: 2rem;
         }
     }
 
-    &__form-container {
-        margin-bottom: 50px;
+    &__sort {
+        white-space: nowrap;
+    }
+
+    &__sort-name {
+        font-size: 14px;
+        color: $light-blue;
+        margin-left: 22px;
+        cursor: pointer;
+
+        &_active {
+            color: $text;
+        }
     }
 
     &__textarea-box {}

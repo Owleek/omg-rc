@@ -69,13 +69,27 @@
     }
 
     &__carousel-item {
-        width: 25%;
         color: #ffffff;
-        font-size: 22px;
+        font-size: 24px;
+        font-weight: 500;
         padding-left: 16px;
         margin-bottom: 0;
         margin-right: 10px;
         border-left: 4px solid $light-blue;
+
+        a {
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+            
+            &:hover {
+                color: $silver;
+            }
+        } 
+        
+        @include respond (lg) {
+            font-size: 22px;
+        }
     }
 
     &_simple {

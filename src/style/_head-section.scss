@@ -56,10 +56,19 @@
         font-weight: 500;
         padding: 15px 16px;
         color: $white;
-        cursor: default;
 
         &:hover {
             color: $white;
+        }
+
+        a {
+            display: block;
+            color: $white;
+
+            &:hover {
+                color: $white;
+                text-decoration: none;
+            }
         }
 
         @include respond(lg) {
