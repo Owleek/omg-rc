@@ -28,9 +28,8 @@ $(document).ready(function() {
   searchTrigger();
 
   $('.request-trigger').click(function() {
-      $(this).hide();
-      $(this).next('.basic-form').addClass('basic-form__active');
-    });
+    showCallRequestForm();
+  });
 
   $('.request-success .button').click(function() {
       $(this) 
@@ -53,6 +52,40 @@ $(document).ready(function() {
   $('.js-phone-mask').inputmask({ mask: "+7 (999) 999 9999"});
 });
 
+
+function showCallRequestForm() {
+  var $content = $('#request-form').clone(true);
+  var $button = $content.find('button.button');
+
+  $button.click(() => {
+    $.fancybox.close();    
+    submitRequestForm().then(() => {
+      showRequestSuccess();
+    });
+  });
+
+  $.fancybox.open($content);  
+}
+  
+function showRequestSuccess() {
+  var $content = $('#request-success').clone();
+  var $button = $content.find('button.button');
+
+  $button.click(() => {
+    $.fancybox.close();
+  });
+
+  $.fancybox.open($content);          
+}
+
+
+function submitRequestForm() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve();
+    }, 500);
+  });
+}
 
 
 function showConsReqSucMes(event) {
