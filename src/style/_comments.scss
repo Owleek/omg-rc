@@ -1,4 +1,5 @@
 .comments {
+
     margin-bottom: 50px;
     
     @include respond(xs) {
@@ -11,14 +12,24 @@
     &__header {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-end;
         margin-bottom: 30px;
+
+        @include respond(sm) {
+
+            align-items: flex-start;
+            flex-direction: column;
+        }
     }
 
     &__title {
         font-size: 2.5rem;
         font-weight: 500;
         margin-bottom: 0;
+
+        @include respond(sm) {
+            margin-bottom: 16px;
+        }
 
         @include respond(xs) {
             font-size: 2rem;
@@ -31,12 +42,19 @@
 
     &__sort-name {
         font-size: 14px;
-        color: $light-blue;
-        margin-left: 22px;
+        color: $light-blue;        
         cursor: pointer;
+            
+        &:last-child {
+            margin-left: 22px;
+        }
 
         &_active {
             color: $text;
+        }
+
+        @include respond(sm) {
+            font-size: 20px;
         }
     }
 
@@ -44,6 +62,7 @@
 
     &__textarea {
         width: 100%;
+        font-size: 18px;
         background-color: $fade;
         border: none;
         resize: none;
@@ -56,6 +75,11 @@
 
         &_bottom {
             height: 140px;
+        }
+
+        &::placeholder {
+            color: $text;
+            font-size: 18px;
         }
     }
 
@@ -78,12 +102,7 @@
         &_deep {
             padding: 30px 0px 1px 50px;
             margin-top: 5px;
-            margin-bottom: 16px;
             border-left: 1px dashed #D3D4D8;
-
-            .comments-post {
-                margin-bottom: 35px;
-            }
 
             .comments-post__avatar {
                 width: 25px;
@@ -93,6 +112,23 @@
             .comments-post__header-content {
                 .tag {
                     display: inline-block;
+                }
+
+                .comments-post__date {
+                    margin-left: 10px;
+
+                    @include respond(xs) {
+                        display: block;
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            .comments-post__header {
+                margin-bottom: 1px;
+
+                @include respond(sm) {
+                    margin-bottom: 15px;
                 }
             }
         }
@@ -107,16 +143,41 @@
 
 .comments-post {
     font-size: 16px;
+    margin-bottom: 35px;
+
+    @include respond(xl) {
+        margin-bottom: 25px;
+    }
 
     @include respond(sm) {
         font-size: 20px;
     }
 
-    &__container {}
+    &__container {
+        display: flex;
+        align-items: flex-start;
+
+    }
+    
+    &__box {
+        margin-right: 40px;
+
+        @include respond(xs) {
+            margin-right: 20px;
+        }
+    }
     
     &__header {
         display: flex;
         margin-bottom: 17px;
+
+        @include respond(xl) {
+            margin-bottom: 1px;
+        }
+
+        @include respond(sm) {
+            margin-bottom: 15px;
+        }
     }
     
     &__avatar {
@@ -142,7 +203,6 @@
     }
     
     &__author-response-label {
-        margin-right: 12px;
     }
 
     &__author {
@@ -151,21 +211,99 @@
         color: $text;
     }
 
-    &__publisher-author {}
+    &__publisher-author {
+        @include respond(xl) {
+            display: none;
+        }
+    }
     
-    &__date {}
+    &__date {
+    }
     
     &__body {
         margin-bottom: 2px;
+
+        @include respond(sm) {
+            margin-bottom: 8px;
+        }
     }
     
-    &__reply {
-        color: $secondary;
+    &__reply,
+    &__delete {
+        color: $light-blue;
         font-size: 14px;
         cursor: pointer;
 
         @include respond(sm) {
             font-size: 20px;
+        }
+    }
+
+    &__self {
+        .comments-post__delete {
+            display: block;
+        }
+
+        .rating-counter__increase-value, 
+        .rating-counter__deacrease-value {
+            cursor: default;
+        }
+        
+        .rating-counter__suffix-svg {
+            fill: $disabled;
+        }
+
+        .rating-counter__highlighted {
+            &:hover {
+                color: $text;
+                svg {
+                    transition: all 0.15s ease-in;
+                    fill: $disabled;
+                }
+            }
+        }
+    }
+}
+
+.rating-counter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+
+    &__increase-value,
+    &__deacrease-value {
+        margin: 0;
+        padding: 0;
+        background: transparent;
+        border: none;
+        transition: all 0.15s ease-in;
+    }
+
+    &__deacrease-value {
+        transform: rotate(180deg);
+    }
+    
+    &__suffix-svg {
+        width: 12px;
+        height: 8px;
+        fill: $icon;
+    }
+
+    &__number {
+        display: block;
+        font-size: 14px;
+        line-height: 1;
+    }
+
+    &__highlighted {
+        &:hover {
+            color: $light-blue;
+            svg {
+                transition: all 0.15s ease-in;
+                fill: $light-blue;
+            }
         }
     }
 }

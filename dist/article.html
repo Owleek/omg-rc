@@ -67,7 +67,9 @@
                  <!--/header__nav -->
              
                  <span class="header__tel button button_blue">
-                     +7 (495) 525-55-83
+                     <a href="tel: +74955255583">
+                         +7 (495) 525-55-83
+                     </a>
                  </span>
              
                  <div class="header__search-bar search-bar">
@@ -101,6 +103,9 @@
                      </svg>
                  </div>
                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
+                     <symbol viewBox="0 0 12 8" id="omg-media-svg-suffix" xmlns="http://www.w3.org/2000/svg">
+                         <path d="M6 0L0 6l1.41 1.41L6 2.83l4.59 4.58L12 6 6 0z" />
+                     </symbol>
                      <symbol fill="none" viewBox="0 0 24 24" id="omg-media-svg-baseline-chat" xmlns="http://www.w3.org/2000/svg">
                          <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"
                              fill="#D3D4D8" />
@@ -333,8 +338,7 @@
                      </symbol>
                      <symbol viewBox="0 0 18 18" id="omg-media-svg-search" xmlns="http://www.w3.org/2000/svg">
                          <path
-                             d="M12.5 11h-.79l-.28-.27A6.471 6.471 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L17.49 16l-4.99-5zm-6 0C4.01 11 2 8.99 2 6.5S4.01 2 6.5 2 11 4.01 11 6.5 8.99 11 6.5 11z"
-                             />
+                             d="M12.5 11h-.79l-.28-.27A6.471 6.471 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L17.49 16l-4.99-5zm-6 0C4.01 11 2 8.99 2 6.5S4.01 2 6.5 2 11 4.01 11 6.5 8.99 11 6.5 11z" />
                      </symbol>
                      <symbol fill="none" viewBox="0 0 25 25" id="omg-media-svg-tel" xmlns="http://www.w3.org/2000/svg">
                          <path
@@ -484,7 +488,9 @@
         <div class="metainfo metainfo_blog">
           <div class="col">
             <div class="metainfo__item metainfo__author">
-              <img class="metainfo__author-pic" src="images/temp/article-author.png" alt="">
+              <span class="metainfo__author-pic">
+                <img src="images/temp/article-author.png" alt="">
+              </span>
               <span class="metainfo__author-name meta-bit">
                 Александр Деканов
               </span>
@@ -695,8 +701,11 @@
                     <use xlink:href="#omg-media-svg-twitter">
                   </svg>
                 </a>
-                <span class="more-social">
-                </span>
+                <a href="#" class="social__box social__box_twitter">
+                  <svg class="social__icon social__icon_telegram">
+                    <use xlink:href="#omg-media-svg-telegram">
+                  </svg>
+                </a>
               </div><!-- /share__links -->
             </div><!-- /share__repost -->
             <div class="share__follow">
@@ -734,98 +743,148 @@
           </div><!-- /share -->
         </div><!-- /article__share-block -->
         <div class="comments">
-          <h2 class="comments__title">
-            Комментарии: 4
-          </h2>
-          <div class="comments__form-container">
-            <div class="comments__textarea-box">
-              <textarea name="" id="" class="comments__textarea comments__textarea_top"></textarea>
+          <div class="comments__header">
+            <h2 class="comments__title">
+              Комментарии: 4
+            </h2>
+            <div class="comments__sort">
+              <span class="comments__sort-name comments__sort-name_active">
+                По рейтингу
+              </span>
+              <span class="comments__sort-name">
+                По порядку
+              </span>
             </div>
           </div>
           <div class="comments__body">
             <ul class="comments__list">
               <li class="comments-post">
                 <div class="comments-post__container">
-                  <div class="comments-post__header">
-                    <span class="comments-post__avatar">
-                      <img src="images/temp/comments-avatar-1.png" alt="">
-                    </span>
-                    <div class="comments-post__header-content">
-                      <span class="comments-post__author tag">
-                        Vadim Zhdanov
+                  <div class="comments-post__box">
+                    <div class="comments-post__header ">
+                      <span class="comments-post__avatar">
+                        <img src="images/temp/comments-avatar-1.png" alt="">
                       </span>
-                      <span class="comments-post__date tag">
-                        2 часа назад
-                      </span>
+                      <div class="comments-post__header-content">
+                        <span class="comments-post__author tag">
+                          Vadim Zhdanov
+                        </span>
+                        <span class="comments-post__date tag">
+                          2 часа назад
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                  <div class="comments-post__body">
-                    Вот как клиент могу честно
-                    сказать, что каждую из этих копеек он заслужил сполна
-                  </div>
-                  <span class="comments-post__reply">
-                    Ответить
-                  </span>
+                    <div class="comments-post__body">
+                      Вот как клиент могу честно
+                      сказать, что каждую из этих копеек он заслужил сполна
+                    </div>
+                    <span class="comments-post__reply">
+                      Ответить
+                    </span>
+                  </div><!-- /comments-post__box -->
+                  <div class="rating-counter">
+                    <button class="rating-counter__increase-value rating-counter__highlighted">
+                      <svg class="rating-counter__suffix-svg">
+                        <use xlink:href="#omg-media-svg-suffix" />
+                      </svg>
+                    </button>
+                    <span class="rating-counter__number">3</span>
+                    <button class="rating-counter__deacrease-value rating-counter__highlighted">
+                      <svg class="rating-counter__suffix-svg">
+                        <use xlink:href="#omg-media-svg-suffix" />
+                      </svg>
+                    </button>
+                  </div><!-- /rating-counter -->
                 </div><!-- /comments-post__container -->
 
                 <ul class="comments__list comments__list_deep">
                   <li class="comments-post">
                     <div class="comments-post__container">
-                      <div class="comments-post__header">
-                        <span class="comments-post__avatar comments-post__avatar_deep">
-                          <img src="images/temp/comments-avatar-2.png" alt="">
-                        </span>
-                        <div class="comments-post__header-content comments-post__header-content_deep">
-                          <span class="comments-post__author-response-label tag">
-                            <span class="comments-post__author tag">
-                              Павел
-                            </span>
-                            <span class="comments-post__publisher-author tag">
-                              &#8592 Vadim Zhdanov
-                            </span>
+                      <div class="comments-post__box">
+                        <div class="comments-post__header">
+                          <span class="comments-post__avatar comments-post__avatar_deep">
+                            <img src="images/temp/comments-avatar-2.png" alt="">
                           </span>
-                          <span class="comments-post__date tag">
-                            2 часа назад
-                          </span>
+                          <div class="comments-post__header-content comments-post__header-content_deep">
+                            <span class="comments-post__author-response-label tag">
+                              <span class="comments-post__author tag">
+                                Павел
+                              </span>
+                              <span class="comments-post__publisher-author tag">
+                                &#8592 Vadim Zhdanov
+                              </span>
+                            </span>
+                            <span class="comments-post__date tag">
+                              2 часа назад
+                            </span>
+                          </div>
+                        </div><!-- /comments-post__header -->
+                        <div class="comments-post__body">
+                          Вот как клиент могу честно
+                          сказать, что каждую из этих копеек он заслужил сполна
                         </div>
-                      </div><!-- /comments-post__header -->
-                      <div class="comments-post__body">
-                        Вот как клиент могу честно
-                        сказать, что каждую из этих копеек он заслужил сполна
-                      </div>
-                      <span class="comments-post__reply">
-                        Ответить
-                      </span>
+                        <span class="comments-post__reply">
+                          Ответить
+                        </span>
+                      </div><!-- /comments-post__box -->
+                      <div class="rating-counter">
+                        <button class="rating-counter__increase-value rating-counter__highlighted">
+                          <svg class="rating-counter__suffix-svg">
+                            <use xlink:href="#omg-media-svg-suffix" />
+                          </svg>
+                        </button>
+                        <span class="rating-counter__number">3</span>
+                        <button class="rating-counter__deacrease-value rating-counter__highlighted">
+                          <svg class="rating-counter__suffix-svg">
+                            <use xlink:href="#omg-media-svg-suffix" />
+                          </svg>
+                        </button>
+                      </div><!-- /rating-counter -->
                     </div><!-- /comments-post__container -->
                   </li><!-- /comments-post -->
 
-                  <li class="comments-post">
+                  <li class="comments-post comments-post__self">
                     <div class="comments-post__container">
-                      <div class="comments-post__header">
-                        <span class="comments-post__avatar comments-post__avatar_deep">
-                          <img src="images/temp/comments-avatar-3.png" alt="">
-                        </span>
-                        <div class="comments-post__header-content comments-post__header-content_deep">
-                          <span class="comments-post__author-response-label tag">
-                            <span class="comments-post__author tag">
-                              Михаил
-                            </span>
-                            <span class="comments-post__publisher-author tag">
-                              &#8592 Vadim Zhdanov
-                            </span>
+                      <div class="comments-post__box">
+                        <div class="comments-post__header">
+                          <span class="comments-post__avatar comments-post__avatar_deep">
+                            <img src="images/temp/comments-avatar-3.png" alt="">
                           </span>
-                          <span class="comments-post__date tag">
-                            2 часа назад
-                          </span>
+                          <div class="comments-post__header-content comments-post__header-content_deep">
+                            <span class="comments-post__author-response-label tag">
+                              <span class="comments-post__author tag">
+                                Михаил
+                              </span>
+                              <span class="comments-post__publisher-author tag">
+                                &#8592 Vadim Zhdanov
+                              </span>
+                            </span>
+                            <span class="comments-post__date tag">
+                              2 часа назад
+                            </span>
+                          </div>
+                        </div><!-- /comments-post__header -->
+                        <div class="comments-post__body">
+                          Вот как клиент могу честно
+                          сказать, что каждую из этих копеек он заслужил сполна
                         </div>
-                      </div><!-- /comments-post__header -->
-                      <div class="comments-post__body">
-                        Вот как клиент могу честно
-                        сказать, что каждую из этих копеек он заслужил сполна
+                        <span class="comments-post__delete">
+                          Удалить свой комментарий
+                        </span>
+                      </div><!-- /comments-post__box -->
+                      <div class="rating-counter">
+                        <button class="rating-counter__increase-value rating-counter__highlighted">
+                          <svg class="rating-counter__suffix-svg">
+                            <use xlink:href="#omg-media-svg-suffix" />
+                          </svg>
+                        </button>
+                        <span class="rating-counter__number">3</span>
+                        <button class="rating-counter__deacrease-value rating-counter__highlighted">
+                          <svg class="rating-counter__suffix-svg">
+                            <use xlink:href="#omg-media-svg-suffix" />
+                          </svg>
+                        </button>
                       </div>
-                      <span class="comments-post__reply">
-                        Ответить
-                      </span>
                     </div><!-- /comments-post__container -->
                   </li><!-- /comments-post -->
                 </ul><!-- /comments__list_deep -->
@@ -833,33 +892,49 @@
 
               <li class="comments-post">
                 <div class="comments-post__container">
-                  <div class="comments-post__header">
-                    <span class="comments-post__avatar">
-                      <img src="images/temp/comments-avatar-4.png" alt="">
-                    </span>
-                    <div class="comments-post__header-content">
-                      <span class="comments-post__author tag">
-                        Антон Петров
+                  <div class="comments-post__box">
+                    <div class="comments-post__header">
+                      <span class="comments-post__avatar">
+                        <img src="images/temp/comments-avatar-4.png" alt="">
                       </span>
-                      <span class="comments-post__date tag">
-                        2 часа назад
-                      </span>
+                      <div class="comments-post__header-content">
+                        <span class="comments-post__author tag">
+                          Антон Петров
+                        </span>
+                        <span class="comments-post__date tag">
+                          2 часа назад
+                        </span>
+                      </div>
+                    </div><!-- /comments-post__header -->
+                    <div class="comments-post__body">
+                      Вот как клиент могу честно
+                      сказать, что каждую из этих копеек он заслужил сполна
                     </div>
-                  </div><!-- /comments-post__header -->
-                  <div class="comments-post__body">
-                    Вот как клиент могу честно
-                    сказать, что каждую из этих копеек он заслужил сполна
+                    <span class="comments-post__reply">
+                      Ответить
+                    </span>
+                  </div><!-- /comments-post__box -->
+                  <div class="rating-counter">
+                    <button class="rating-counter__increase-value rating-counter__highlighted">
+                      <svg class="rating-counter__suffix-svg">
+                        <use xlink:href="#omg-media-svg-suffix" />
+                      </svg>
+                    </button>
+                    <span class="rating-counter__number">3</span>
+                    <button class="rating-counter__deacrease-value rating-counter__highlighted">
+                      <svg class="rating-counter__suffix-svg">
+                        <use xlink:href="#omg-media-svg-suffix" />
+                      </svg>
+                    </button>
                   </div>
-                  <span class="comments-post__reply">
-                    Ответить
-                  </span>
                 </div><!-- /comments-post__container -->
               </li><!-- /comments-post -->
             </ul><!-- /comments__list -->
           </div><!-- /comments__body -->
           <div class="comments__form-container">
             <div class="comments__textarea-box">
-              <textarea name="" id="" class="comments__textarea comments__textarea_bottom"></textarea>
+              <textarea name="" id="" class="comments__textarea comments__textarea_bottom"
+                placeholder="Написать ответ ..."></textarea>
             </div>
             <div class="comments__actions-form comments__actions-form_reply">
               <div class="comments__btn-group">
