@@ -63,7 +63,7 @@
 
         a {
             display: block;
-            color: $white;
+            color: $white !important;
 
             &:hover {
                 color: $white;

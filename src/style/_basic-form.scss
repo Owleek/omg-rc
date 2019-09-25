@@ -64,14 +64,38 @@
         color: $light-blue;
         user-select: none;
 
+        a {
+            color: $light-blue;
+
+            &:hover {
+                color: $light-blue;
+            }
+        }
+
         &_responsive-aqua {
             @include respond(sm) {
                 color: $aqua;
+
+                a {
+                    color: $aqua;
+        
+                    &:hover {
+                        color: $aqua;
+                    }
+                }
             }
         }
         
         &_aqua {
             color: $aqua;
+
+            a {
+                color: $aqua;
+    
+                &:hover {
+                    color: $aqua;
+                }
+            }
         }
     }
 
@@ -84,6 +108,14 @@
             display: inline-block;
             position: relative;
             padding-left: 30px;
+
+            a {
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
             
             &:before,
             &:after {

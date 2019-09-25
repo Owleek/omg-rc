@@ -270,6 +270,13 @@ function searchTrigger() {
   const $clear = $searchBar.find(".search-bar__clear");
   const $doc = $(document);
 
+  triggerClearButton();
+  $searchInput.on("keyup", triggerClearButton);
+  $clear.on("click", function() {
+    $searchInput.val("");
+    triggerClearButton();
+  });
+
   $searchIcon.on("click", function(event) {
     event.stopPropagation();
 
@@ -278,11 +285,6 @@ function searchTrigger() {
 
     $doc.on("keyup", onSearchBarEscapeListener);
     $doc.on("click", onSearchBarCloseListener);
-    $clear.on("click", function() {
-      $searchInput.val("");
-      triggerClearButton();
-    });
-    $searchInput.on("keyup", triggerClearButton);
   });
 
   function triggerClearButton() {
@@ -311,9 +313,7 @@ function searchTrigger() {
     $doc.off("click", onSearchBarCloseListener);
     $doc.off("keyup", onSearchBarEscapeListener);
     $searchInput.val("");
-    $searchInput.off("keyup", triggerClearButton);
     triggerClearButton();
-    $clear.off("click");
   }
 }
 

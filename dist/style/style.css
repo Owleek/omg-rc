@@ -781,7 +781,7 @@ article .col-6 {
 
 .header__tel a {
     display: block;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
 }
 
 .header__tel a:hover {
@@ -2447,13 +2447,37 @@ article .col-6 {
     user-select: none;
 }
 
+.basic-form__input-confirm a {
+    color: #348AD9;
+}
+
+.basic-form__input-confirm a:hover {
+    color: #348AD9;
+}
+
 @media only screen and (max-width: 767px) {
     .basic-form__input-confirm_responsive-aqua {
+        color: #B0D9FF;
+    }
+
+    .basic-form__input-confirm_responsive-aqua a {
+        color: #B0D9FF;
+    }
+
+    .basic-form__input-confirm_responsive-aqua a:hover {
         color: #B0D9FF;
     }
 }
 
 .basic-form__input-confirm_aqua {
+    color: #B0D9FF;
+}
+
+.basic-form__input-confirm_aqua a {
+    color: #B0D9FF;
+}
+
+.basic-form__input-confirm_aqua a:hover {
     color: #B0D9FF;
 }
 
@@ -2468,6 +2492,14 @@ article .col-6 {
     display: inline-block;
     position: relative;
     padding-left: 30px;
+}
+
+.basic-form .checkbox__label a {
+    text-decoration: none;
+}
+
+.basic-form .checkbox__label a:hover {
+    text-decoration: none;
 }
 
 .basic-form .checkbox__label:before, .basic-form .checkbox__label:after {
@@ -6114,6 +6146,16 @@ article .col-6 {
     }
 }
 
+.footer__nav .nav__list-item_show-on-sm {
+    display: none;
+}
+
+@media only screen and (max-width: 767px) {
+    .footer__nav .nav__list-item_show-on-sm {
+        display: block;
+    }
+}
+
 @media only screen and (max-width: 767px) {
     .footer__nav .nav__list-item-link {
         color: #348AD9;
@@ -6190,12 +6232,27 @@ article .col-6 {
     fill: #D3D4D8;
 }
 
-.footer__copyrights {
+.footer__bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     margin-bottom: 60px;
+    font-size: 14px;
+    color: #B0D9FF;
+}
+
+.footer__bottom .account-logout {
+    margin-left: auto;
+    -ms-flex-preferred-size: 26%;
+    flex-basis: 26%;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 767px) {
-    .footer__copyrights {
+    .footer__bottom {
         color: #8B90A0;
     }
 }

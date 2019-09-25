@@ -89,6 +89,14 @@
             @include respond(sm) {
                 margin-bottom: 24px;
             }
+
+            &_show-on-sm {
+                display: none;
+
+                @include respond(sm) {
+                    display: block;
+                }
+            }
         }
 
         .nav__list-item-link {
@@ -159,11 +167,24 @@
         fill: $icon;
     }
 
-    &__copyrights {
+    &__bottom {
+        display: flex;
+        align-items: center;
         margin-bottom: 60px;
+
+        font-size: 14px;
+        color: #B0D9FF;
+
+        .account-logout {
+            margin-left: auto;
+            flex-basis: 26%;
+            cursor: pointer;
+        }
+    
 
         @include respond(sm) {
             color: $secondary;
         }
     }
+
 }
