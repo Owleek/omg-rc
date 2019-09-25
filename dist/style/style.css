@@ -7455,3 +7455,54 @@ button.swiper-pagination-bullet {
 .request-success .button {
     width: 200px;
 }
+
+.number-of-search-results {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.search-result {
+    margin-bottom: 45px;
+}
+
+.search-result:last-child {
+    margin-bottom: 60px;
+}
+
+.search-result__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    line-height: 40px;
+}
+
+.search-result__title a {
+    text-decoration: none;
+    color: #292A6B;
+}
+
+.search-result__title a:hover {
+    color: #505565;
+}
+
+@media only screen and (max-width: 767px) {
+    .search-result__title {
+        font-size: 1.5rem;
+        line-height: 32px;
+    }
+}
+
+.search-result__desc {
+    font-size: 20px;
+    color: #080B1A;
+}
+
+@media only screen and (max-width: 767px) {
+    .search-result__desc {
+        font-size: 24px;
+        line-height: 40px;
+    }
+}
+
+.search-page-subscribe {
+    margin-bottom: 45px;
+}

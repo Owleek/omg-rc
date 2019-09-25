@@ -279,13 +279,9 @@
 }
 //********************* /article styles
 
-
-
-
 .typed-cursor {
 	position: absolute;
 }
-
 
 .request-success {
 	display: none;
@@ -306,4 +302,48 @@
 	}
 }
 
+.number-of-search-results {
+	font-size: 20px;
+	margin-bottom: 30px;
+}
 
+.search-result {
+	margin-bottom: 45px;
+	&:last-child {
+		margin-bottom: 60px;
+	}
+
+	&__title {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+		line-height: 40px;
+
+		a {
+			text-decoration: none;
+			color: $dark-blue;
+
+			&:hover {
+				color: $text;
+			}
+		}
+
+		@include respond(sm) {
+			font-size: 1.5rem;
+			line-height: 32px;
+		}
+	}
+
+	&__desc {
+		font-size: 20px;
+		color: $dark;
+
+		@include respond(sm) {
+			font-size: 24px;
+			line-height: 40px;
+		}
+	}
+}
+
+.search-page-subscribe {
+	margin-bottom: 45px;
+}
