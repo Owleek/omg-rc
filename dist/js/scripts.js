@@ -332,6 +332,25 @@ $(document).ready(function() {
     showCallRequestForm();
   });
 
+  $('.call-request').click(function() {
+    submitRequestSample().then(() => {
+      showRequestSuccess();
+    });
+  });  
+
+  $('.free-audit-request').click(function() {
+    submitRequestSample().then(() => {
+      showRequestSuccess();
+    });
+  });
+
+
+  $('.button__reply').click(function() {
+    if (!window.authenticated) {
+      $.fancybox.open($('#comments-popap'));
+    }
+  });
+
   $('.request-success .button').click(function() {
       $(this) 
         .parents('.consult-request')
@@ -360,7 +379,7 @@ function showCallRequestForm() {
 
   $button.click(() => {
     $.fancybox.close();    
-    submitRequestForm().then(() => {
+    submitRequestSample().then(() => {
       showRequestSuccess();
     });
   });
@@ -380,7 +399,7 @@ function showRequestSuccess() {
 }
 
 
-function submitRequestForm() {
+function submitRequestSample() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve();
