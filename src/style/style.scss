@@ -351,3 +351,44 @@
 .request-success__message {
 	text-align: center;
 }
+
+
+.comments-popap {
+	background-color: #808080;
+	padding-top: 65px;
+	padding-bottom: 160px;
+
+	@include respond(md) {
+		padding-top: 130px;
+		padding-bottom: 120px;
+	}
+}
+
+.login-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 16px;
+	
+
+	&__text {
+		font-size: 24px;
+		color: $white;
+		font-weight: 500;
+
+		@include respond(md) {
+			margin-bottom: 24px;
+		}
+	}
+
+	&__socials {
+		.social__box {
+			margin-left: 5px;
+		}
+	} 
+
+	@include respond(md) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}

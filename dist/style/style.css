@@ -4882,6 +4882,10 @@ article .col-6 {
     background-color: #1DA1F2;
 }
 
+.social__box_yandex-word {
+    background-color: #DF251F;
+}
+
 .social__icon {
     fill: #ffffff;
     width: 26px;
@@ -4922,6 +4926,11 @@ article .col-6 {
 .social__icon_email {
     width: 26px;
     height: 20px;
+}
+
+.social__icon_yandex-word {
+    width: 14px;
+    height: 28px;
 }
 
 .blog-card {
@@ -7566,4 +7575,58 @@ button.swiper-pagination-bullet {
 
 .request-success__message {
     text-align: center;
+}
+
+.comments-popap {
+    background-color: #808080;
+    padding-top: 65px;
+    padding-bottom: 160px;
+}
+
+@media only screen and (max-width: 1023px) {
+    .comments-popap {
+        padding-top: 130px;
+        padding-bottom: 120px;
+    }
+}
+
+.login-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 16px;
+}
+
+.login-container__text {
+    font-size: 24px;
+    color: #FFFFFF;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 1023px) {
+    .login-container__text {
+        margin-bottom: 24px;
+    }
+}
+
+.login-container__socials .social__box {
+    margin-left: 5px;
+}
+
+@media only screen and (max-width: 1023px) {
+    .login-container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
 }

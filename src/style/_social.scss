@@ -35,6 +35,10 @@
         &_twitter {
             background-color: #1DA1F2;
         }
+
+        &_yandex-word {
+            background-color: #DF251F;
+        }
     }
 
     &__icon {
@@ -73,6 +77,11 @@
         &_email {
             width: 26px;
             height: 20px;
+        }
+
+        &_yandex-word {
+            width: 14px;
+            height: 28px;
         }
     }
 }
