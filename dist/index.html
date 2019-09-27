@@ -496,6 +496,27 @@
                             <button class="button button_block consult-request__button request-trigger">
                                 Бесплатная консультация
                             </button>
+                            <div class="basic-form basic-form__hide">
+                                <div class="basic-form__row-inputs">
+                                    <div class="basic-form__input-box">
+                                        <input class="basic-form__input basic-form__input_bg-gray js-phone-mask" type="text"
+                                            placeholder="Номер телефона">
+                                    </div>
+                                    <button class="button basic-form__button call-request">
+                                        Получить
+                                    </button>
+                                </div>
+                                <div class="basic-form__input-confirm">
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" checked="checked">
+                                        <span class="checkbox__label">
+                                            <a href="#">
+                                                Согласие на обработку персональных данных
+                                            </a>
+                                        </span>
+                                    </label>
+                                </div><!-- /basic-form__input-confirm -->
+                            </div><!-- /basic-form -->
                         </div><!-- /consult-request__content -->
                     </div><!-- /consult-request -->
                 </div><!-- /relative-wrapper -->
@@ -1626,27 +1647,6 @@
     </div><!-- /page-wrapper -->
 
     <div style="display: none">
-        <div class="basic-form" id="request-form">
-            <div class="basic-form__row-inputs">
-                <div class="basic-form__input-box">
-                    <input class="basic-form__input basic-form__input_bg-gray js-phone-mask" type="text"
-                        placeholder="Номер телефона">
-                </div>
-                <button class="button basic-form__button" onclick="showConsReqSucMes(event)">
-                    Получить
-                </button>
-            </div>
-            <div class="basic-form__input-confirm">
-                <label class="checkbox">
-                    <input class="checkbox__input" type="checkbox" checked="checked">
-                    <span class="checkbox__label">
-                        <a href="#">
-                            Согласие на обработку персональных данных
-                        </a>
-                    </span>
-                </label>
-            </div><!-- /basic-form__input-confirm -->
-        </div><!-- /basic-form -->
         <div class="request-success" id="request-success">
             <div class="request-success__message">
                 <h2>Спасибо за заявку<h2>
