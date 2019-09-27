@@ -28,7 +28,8 @@ $(document).ready(function() {
   searchTrigger();
 
   $('.request-trigger').click(function() {
-    showCallRequestForm();
+    $(this).hide();
+    $(this).next('.basic-form').addClass('basic-form__active');
   });
 
   $('.call-request').click(function() {
@@ -50,15 +51,15 @@ $(document).ready(function() {
     }
   });
 
-  $('.request-success .button').click(function() {
-      $(this) 
-        .parents('.consult-request')
-        .find('.consult-request__content')
-        .show();
-      $(this)
-        .parents('.request-success')
-        .hide();
-    });
+  // $('.request-success .button').click(function() {
+  //     $(this) 
+  //       .parents('.consult-request')
+  //       .find('.consult-request__content')
+  //       .show();
+  //     $(this)
+  //       .parents('.request-success')
+  //       .hide();
+  //   });
 
   $('.block-fadein').one('inview', function() {
       $(this).addClass('inview');
